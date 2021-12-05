@@ -1,0 +1,162 @@
+// Utilities
+@import "../1-utilities/_variables.scss";
+@import "../1-utilities/_mixins.scss";
+
+/* Only Buttons */
+
+//Buttons
+.btn {
+  padding: $btn-padding;
+  display: inline-block;
+  border-radius: 0.4em;
+  margin-top: 2rem;
+  font-size: 1em;
+  font-weight: bold;
+  transition: all 0.4s ease-in-out;
+  text-decoration: none !important;
+  &:focus {
+    border: 1px solid rgba($color: #000000, $alpha: 0.2) !important;
+  }
+}
+button {
+  border: none;
+  &:focus {
+    border: 1px solid rgba($color: #000000, $alpha: 0.2) !important;
+  }
+}
+.btn-icon {
+  border-radius: 0.4em;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn-primary {
+  background-color: $primary-clr;
+  color: #fff;
+  box-shadow: inset 0 0 0 0 #214eba;
+}
+.btn-secondary {
+  background-color: $secondary-clr;
+  color: #fff;
+  box-shadow: inset 0 0 0 0 #c94724;
+}
+.btn-light {
+  background-color: $light-clr;
+  color: dark-clr;
+}
+.btn-mid-toned {
+  background-color: $mid-toned-clr;
+  color: #fff;
+}
+.btn-outlined {
+  border: 2px solid;
+  color: $dark-clr;
+  background-color: #fff;
+  &.border-primary-clr {
+    border: 2px solid $primary-clr;
+    box-shadow: inset 0 0 0 0 $primary-clr;
+  }
+  &.border-secondary-clr {
+    border: 2px solid $secondary-clr;
+    box-shadow: inset 0 0 0 0 $secondary-clr;
+  }
+}
+
+// Buttons on Hover/Active
+.btn-primary:hover,
+.btn-primary:active {
+  box-shadow: inset 400px 0 0 0 #214eba;
+}
+.btn-secondary:hover,
+.btn-secondary:active {
+  box-shadow: inset 400px 0 0 0 #c94724;
+}
+.btn-outlined:hover {
+  color: #fff;
+  &.border-primary-clr {
+    box-shadow: inset 400px 0 0 0 $primary-clr;
+  }
+  &.border-secondary-clr {
+    box-shadow: inset 400px 0 0 0 $secondary-clr;
+  }
+}
+
+// Badges
+.badge {
+  padding: 0.2rem 0.625rem;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  border-radius: 1rem;
+  color: #fff;
+  text-transform: uppercase;
+  line-height: 1.7;
+}
+
+// Blog filters
+.blog-filters {
+  & .filters {
+    & button {
+      margin: 0.25rem;
+      transition: all 0.1s;
+      &:hover {
+        background: $primary-clr;
+        color: #fff;
+      }
+    }
+  }
+}
+.btn.active {
+  background-color: $primary-clr !important;
+  color: #fff;
+}
+
+.btn-filter {
+  background-color: $light-clr;
+}
+
+// Pagination
+/* Pagination links */
+.blog-pagination {
+  margin-top: 2.5em;
+  display: flex;
+}
+.blog-pagination a {
+  color: $dark-clr;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  border-radius: 5px;
+  background-color: $light-clr;
+  margin: 0.25rem;
+  font-weight: bold;
+}
+
+/* Style the active/current link */
+.blog-pagination a.active {
+  background-color: $primary-clr;
+  color: white;
+}
+
+/* Add a grey background color on mouse-over */
+.blog-pagination a:hover:not(.active) {
+  background-color: $mid-toned-clr;
+  color: #fff;
+}
+
+.social_icon {
+  background-color: $lightest-clr;
+  color: $dark-clr;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+.sub-footer .sub-footer-content div:last-child .social_icon:first-child {
+  margin-right: 0.5rem;
+}

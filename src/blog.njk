@@ -1,0 +1,58 @@
+---
+title: Blog | Webmania
+layout: 'base.njk'
+---
+
+<!-- Hero Banner -->
+<section class="full-width light-bg hero-banner">
+  <div class="useful-width margin-constraint hero-banner-content">
+    <div>
+      <h3>En recherche d'emploi</h3>
+      <h1 class="dark-clr">Blog</h1>
+      <p>Des articles de blog pour rebondir sur l'actualité et partager mes connaissances.</p>
+      <a href="contact.php" class="btn btn-primary uppercase">Un projet ? Parlons-en !</a>
+    </div>
+    <div>
+      <img src="\assets\bitmap\hero\random-model-blog-min.png" alt="Jeune femme cheveux bouclés souriante et étonnée">
+    </div>
+  </div>
+</section>
+
+<!-- Blog -->
+<section class="full-width blog">
+  <div class="useful-width margin-constraint blog-content">
+    <div class="blog-title">
+      <h3>Articles de blog</h3>
+      <h2 class="dark-clr">Des articles et des tutoriels pour vous aider à développer votre communication en ligne </h2>
+    </div>
+    <div class="blog-filters">
+      <div id="filters" class="filters">
+        <button class="btn btn-filter active" onclick="filterSelection('all')">Tous</button>
+        <button class="btn btn-filter" onclick="filterSelection('development')">Developpement web</button>
+        <button class="btn btn-filter" onclick="filterSelection('design')">Design</button>
+        <button class="btn btn-filter" onclick="filterSelection('marketing')">Marketing</button>
+        <button class="btn btn-filter" onclick="filterSelection('entrepreneurship')">Entrepreneuriat</button>
+        <button class="btn btn-filter" onclick="filterSelection('communication')">Communication</button>
+        <button class="btn btn-filter" onclick="filterSelection('other')">Autre</button>
+      </div>
+    </div>
+
+    {# Blog Cards Loop #}
+    <div class="blog-cards">
+      {%- for post in collections.post | reverse -%}
+        {% include 'article-snippet.njk' %}
+      {%- endfor -%}
+
+    </div>
+    <div class="blog-pagination">
+      <a href="#">&laquo;</a>
+      <a href="#" class="active">1</a>
+      <a href="#">2</a>
+      <a href="#">3</a>
+      <a href="#">4</a>
+      <a href="#">5</a>
+      <a href="#">6</a>
+      <a href="#">&raquo;</a>
+    </div>
+  </div>
+</section>

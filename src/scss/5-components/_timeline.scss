@@ -1,0 +1,216 @@
+.timeline {
+  position: relative;
+
+  &::before {
+    content: "";
+    background: #fff;
+    width: 5px;
+    height: 95%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.timeline-item {
+  width: 100%;
+
+  &:nth-child(even) {
+    .timeline-content {
+      float: right;
+
+      .date {
+        right: auto;
+        left: 0;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        border-style: solid;
+        width: 0;
+        height: 0;
+        top: 135px;
+        left: -14px;
+        border-width: 10px 15px 10px 0;
+        border-color: transparent #fff transparent transparent;
+      }
+    }
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+
+.timeline-content {
+  position: relative;
+  width: 40%;
+  padding: 30px;
+  background-color: #fff;
+
+  &::after {
+    content: "";
+    position: absolute;
+    border-style: solid;
+    width: 0;
+    height: 0;
+    top: 136px;
+    right: -14px;
+    border-width: 10px 0 10px 15px;
+    border-color: transparent transparent transparent #fff;
+  }
+  & p {
+    padding: 30px;
+    background-color: $light-clr;
+    border-radius: 5px;
+  }
+}
+
+.timeline-img {
+  width: 30px;
+  height: 30px;
+  background: $primary-clr;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  margin-top: 130px;
+  margin-left: -15px;
+}
+
+.timeline-card {
+  padding: 0 !important;
+
+  p {
+    padding: 0 20px;
+  }
+
+  a {
+    margin-left: 20px;
+  }
+}
+
+.company-img {
+  width: 130px;
+  height: 120px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: $primary-clr;
+  background-size: cover;
+  border-radius: 5px 0 120px 0;
+  background-position: center;
+  &.webmania {
+    background-image: url(../assets/bitmap/timeline/webmania.jpg);
+  }
+  &.wedi {
+    background-image: url(../assets/bitmap/timeline/wedi.jpg);
+  }
+  &.idrac {
+    background-image: url(../assets/bitmap/timeline/idrac.png);
+  }
+  &.lim {
+    background-image: url(../assets/bitmap/timeline/lim-sas.webp);
+  }
+  &.wis {
+    background-image: url(../assets/bitmap/timeline/wis.jpg);
+  }
+  &.manaa {
+    background-image: url(../assets/bitmap/timeline/beaux-arts.jpg);
+  }
+  &.daeu {
+    background-image: url(../assets/bitmap/timeline/lyon-3.jpg);
+  }
+  &.idweaver {
+    background-image: url(../assets/bitmap/timeline/idweaver.jpg);
+  }
+  &.interface3 {
+    background-image: url(../assets/bitmap/timeline/interface-3.jpg);
+  }
+}
+
+.timeline-title {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 2em 0;
+  & i {
+    margin-bottom: 0.4em;
+  }
+  & span {
+    margin-bottom: 0.75rem;
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+  & h4 {
+    position: relative;
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 20px;
+      height: 2px;
+      background-color: $secondary-clr;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 2rem;
+    }
+  }
+}
+
+.context {
+  display: inline-block;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .timeline {
+    &::before {
+      left: 50px;
+    }
+
+    .timeline-img {
+      left: 50px;
+    }
+
+    .company-img {
+      display: none;
+    }
+
+    .timeline-content {
+      max-width: 100%;
+      width: auto;
+      margin-left: 70px;
+    }
+
+    .timeline-item {
+      margin-bottom: 70px;
+      &:nth-child(even) {
+        .timeline-content {
+          float: none;
+        }
+      }
+
+      &:nth-child(odd) {
+        .timeline-content {
+          &::after {
+            content: "";
+            position: absolute;
+            border-style: solid;
+            width: 0;
+            height: 0;
+            top: 30px;
+            left: -15px;
+            border-width: 10px 15px 10px 0;
+            border-color: transparent #f5f5f5 transparent transparent;
+          }
+        }
+      }
+    }
+  }
+}

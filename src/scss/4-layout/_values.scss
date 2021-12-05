@@ -1,0 +1,118 @@
+/* Values section layout */
+.values,
+.skills,
+.timeline {
+  position: relative;
+}
+
+.form-title {
+  grid-column: 1 / span 3;
+  @include for-tablet-portrait-up {
+    grid-column: 1 / span 8;
+  }
+  @include for-desktop-up {
+    grid-column: 3 / span 8;
+  }
+}
+
+.form-content {
+  grid-column: 1 / span 4;
+  max-width: 100%;
+  @include for-tablet-portrait-up {
+    grid-column: 1 / span 8;
+  }
+  @include for-desktop-up {
+    grid-column: 3 / span 8;
+  }
+}
+
+.values-content,
+.skills-content,
+.timeline-grid,
+.skills-bars {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  text-align: center;
+  @include for-tablet-portrait-up {
+    grid-template-columns: repeat(8, 1fr);
+  }
+  @include for-desktop-up {
+    grid-template-columns: repeat(12, 1fr);
+  }
+  .values-title,
+  .skills-title,
+  .timeline-main-title,
+  .skills-bars-title {
+    grid-column: 1 / span 3;
+    @include for-tablet-portrait-up {
+      grid-column: 1 / span 8;
+    }
+    @include for-desktop-up {
+      grid-column: 3 / span 8;
+    }
+  }
+  .values-cards,
+  .timeline {
+    grid-column: 1 / span 3;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-auto-rows: minmax(min-content, max-content);
+    grid-gap: 1em;
+    @include for-tablet-portrait-up {
+      grid-column: 1 / span 8;
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include for-tablet-landscape-up {
+      grid-column: 2 / span 6;
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include for-desktop-up {
+      grid-column: 1 / span 12;
+      grid-template-columns: repeat(4, 1fr);
+    }
+    & div:nth-child(2n) {
+      @include for-desktop-up {
+        margin-top: 5em;
+      }
+    }
+  }
+  & .skills-cards {
+    grid-column: 1 / span 3;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 1em;
+    @include for-tablet-portrait-up {
+      grid-column: 1 / span 8;
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include for-tablet-landscape-up {
+      grid-column: 2 / span 6;
+    }
+    @include for-desktop-up {
+      grid-column: 1 / span 12;
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  & .tech-skills {
+    grid-column: 1 / span 3;
+    @include for-tablet-portrait-up {
+      grid-column: 1 / span 8;
+    }
+    @include for-desktop-up {
+      grid-column: 1 / span 6;
+      margin-right: 0.5em;
+    }
+  }
+  & .soft-skills {
+    grid-column: 1 / span 3;
+    @include for-tablet-portrait-up {
+      grid-column: 1 / span 8;
+    }
+    @include for-desktop-up {
+      grid-column: 7 / span 6;
+      margin-left: 0.5em;
+    }
+  }
+}

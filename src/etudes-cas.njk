@@ -1,0 +1,57 @@
+---
+title: Études de cas | Webmania
+layout: 'base.njk'
+---
+
+<!-- Hero Banner -->
+<section class="full-width light-bg hero-banner">
+  <div class="useful-width margin-constraint hero-banner-content">
+    <div>
+      <h3>En recherche d'emploi</h3>
+      <h1 class="dark-clr">Études de cas</h1>
+      <p>Des exemples concrets pour mieux comprendre mes méthodes de travail.</p>
+      <a href="contact.php" class="btn btn-primary uppercase">Un besoin ? Parlons-en !</a>
+    </div>
+    <div>
+      <img src="\assets\bitmap\hero\random-model-case-studies-min.png" alt="Jeune femme cheveux bouclés souriante qui lève le pouce">
+    </div>
+  </div>
+</section>
+
+<!-- Case studies Partials -->
+<section id="case-studies" class="full-width">
+  <div class="useful-width margin-constraint case-studies-content">
+    <div class="case-studies-title-container">
+      <div class="case-studies-title">
+        <h3>Études de cas</h3>
+        <h2 class="dark-clr">Des exemples concrets pour mieux comprendre mes méthodes de travail</h2>
+      </div>
+    </div>
+    <div class="case-studies-cards">
+      <div class="owl-carousel owl-carousel-lg owl-theme">
+        {%- for portfolio in collections.portfolio -%}
+          {% include 'case-study-snippet.njk' %}
+        {%- endfor -%}
+      </div>
+    </div>
+  </div>
+</section>
+
+{%- for portfolio in collections.portfolio -%}
+  {% include 'case-study.njk' %}
+{%- endfor -%}
+
+<!-- Blog -->
+<section class="full-width blog light-bg">
+  <div class="useful-width margin-constraint blog-content">
+    <div class="blog-title">
+      <h3>Articles de blog</h3>
+      <h2 class="dark-clr">Des articles et des tutoriels pour vous aider à développer votre communication en ligne </h2>
+    </div>
+    <div class="blog-cards">
+      {%- for post in collections.featured | reverse -%}
+        {% include 'article-snippet.njk' %}
+      {%- endfor -%}
+    </div>
+  </div>
+</section>

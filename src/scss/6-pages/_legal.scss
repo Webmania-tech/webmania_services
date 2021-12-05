@@ -1,0 +1,22 @@
+// Utilities
+@import "../1-utilities/_variables.scss";
+
+.legal b, .legal strong {
+  color: $dark-clr;
+}
+
+.legal h2 {
+    color: $dark-clr;
+}
+
+.legal h3 {
+    margin: 2em 0;
+}
+
+.legal a {
+    text-decoration: underline;
+}
+
+.legal .last-item {
+    margin-bottom: 3em;
+}

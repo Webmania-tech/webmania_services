@@ -1,0 +1,19 @@
+.case-studies-title-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  @include for-tablet-portrait-up {
+    grid-template-columns: repeat(8, 1fr);
+  }
+  @include for-desktop-up {
+    grid-template-columns: repeat(12, 1fr);
+  }
+  .case-studies-title {
+    grid-column: 1 / span 4;
+    @include for-tablet-portrait-up {
+      grid-column: 1 / span 7;
+    }
+    @include for-desktop-up {
+      grid-column: 1 / span 7;
+    }
+  }
+}

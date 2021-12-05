@@ -1,0 +1,34 @@
+// Import utilities
+@import "./_variables.scss";
+
+/* Mixins only */
+
+@mixin for-phone-only {
+  @media screen and (max-width: map-get($breakpoints, for-phone-only)) {
+    @content;
+  }
+}
+
+@mixin for-tablet-portrait-up {
+  @media screen and (min-width: map-get($breakpoints, for-tablet-portrait-up)) {
+    @content;
+  }
+}
+
+@mixin for-tablet-landscape-up {
+  @media screen and (min-width: map-get($breakpoints, for-tablet-landscape-up)) {
+    @content;
+  }
+}
+
+@mixin for-desktop-up {
+  @media screen and (min-width: map-get($breakpoints, for-desktop-up)) {
+    @content;
+  }
+}
+
+@mixin for-big-desktop-up {
+  @media screen and (min-width: map-get($breakpoints, for-big-desktop-up)) {
+    @content;
+  }
+}

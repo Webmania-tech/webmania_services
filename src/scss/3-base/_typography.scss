@@ -1,0 +1,81 @@
+/* Imports */
+/* Globally enable grid prefixes */
+/* autoprefixer grid: autoplace */
+
+// Utilities
+@import "../1-utilities/_variables.scss";
+@import "../1-utilities/_mixins.scss";
+
+/* Only rules for typography */
+
+// Font-stacks
+body {
+  font-family: "Catamaran", "Trebuchet MS", sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Amaranth", "Georgia", serif;
+  margin: 0;
+}
+
+// Base
+html {
+  font-size: 16px;
+}
+body {
+  font-size: 1rem;
+  line-height: 1.5em;
+  font-weight: 400;
+  color: $mid-toned-clr;
+}
+p a {
+  color: $mid-toned-clr;
+  transition: color 0.4s ease-out;
+}
+
+// Links on hover
+.card:hover a h4 {
+  color: $secondary-clr !important;
+}
+p a:hover {
+  color: $dark-clr;
+}
+
+// Titles
+h1 {
+  font-size: 3rem;
+  line-height: 1.2em;
+  margin-bottom: 1rem;
+}
+h2 {
+  font-size: 2rem;
+  line-height: 1.3em;
+  margin-bottom: 2.5rem;
+}
+h3 {
+  font-size: 0.75rem;
+  margin-bottom: 0.75rem;
+  display: inline-block;
+  line-height: 1.5em;
+  padding: 0.25rem 0.625rem;
+  font-family: "Catamaran", "Trebuchet MS", sans-serif;
+  background-color: $secondary-clr;
+  color: $white-clr;
+  text-transform: uppercase;
+  font-weight: 800;
+  border-radius: 1em;
+}
+h4 {
+  font-size: 1.125rem;
+  line-height: 1.3em;
+  transition: color 0.4s ease-out;
+}
+h5 {
+  font-size: 1rem;
+  line-height: 1.3em;
+  color: $dark-clr !important;
+}

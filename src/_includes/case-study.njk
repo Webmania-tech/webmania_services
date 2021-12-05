@@ -1,0 +1,352 @@
+<aside id="{{ portfolio.data.id }}" class="modal" role="dialog" aria-hidden="true" aria-labelledby="titlemodal" style="display: none">
+    <div class="modal-wrapper js-modal-stop">
+        <button class="js-modal-close demo-close">
+            <i class="fas fa-times fa-lg"></i>
+        </button>
+        <!-- Modal Hero Img -->
+        {# <img src="{{ portfolio.data.heroImage }}" alt="{{ portfolio.data.heroImageAlt }}"/> #}
+        <!-- Modal Header -->
+        <div class="modal-grid modal-padding light-bg">
+            <!-- Modal close button -->
+            <div class="modal-left-title">
+                <h3 id="title-modal">Étude de cas</h3>
+                <h1 class="dark-clr">{{ portfolio.data.title }}</h1>
+                <p id="titlemodal">{{ portfolio.data.description }}</p>
+                <a href="{{ portfolio.data.firstHeroLinkUrl }}" target="_blank" class="btn btn-primary uppercase">{{ portfolio.data.firstHeroLinkTitle }}</a>
+            </div>
+        </div>
+
+        <!-- Modal General Presentation -->
+        <section class="modal-grid modal-padding modal-presentation">
+            <!-- Modal Context -->
+            <div class="modal-context">
+                <div>
+                    <h3>Le contexte</h3>
+                    <h2 class="dark-clr">{{ portfolio.data.contextTitle }}</h2>
+                    <p>{{ portfolio.data.contextfirstDesc}}</p>
+                    <p>{{ portfolio.data.contextsecondDesc}}</p>
+                </div>
+                <div class="modal-stats-title">
+                    <h3>Quelques chiffres</h3>
+                    <h2 class="dark-clr">{{ portfolio.data.statsTitle }}</h2>
+                </div>
+            </div>
+            <!-- Modal Challenges -->
+            <div class="modal-challenges">
+                <div>
+                    <h3>Les enjeux</h3>
+                    <h2 class="dark-clr">{{ portfolio.data.challengesTitle }}</h2>
+                </div>
+                <div class="modal-summary">
+                    <img src="\assets\etudes-cas\coups-de-main-celine\lcdmdc-visual-identity.png" alt="Logo créé pour les Coups de Main de Céline"/>
+                </div>
+            </div>
+        </section>
+
+        <!-- Strategic analysis -->
+        <section class="modal-grid modal-padding modal-analysis light-bg">
+            <div class="analysis-title modal-left-title">
+                <h3>{{ portfolio.data.analysisBadge }}</h3>
+                <h2 class="dark-clr">{{ portfolio.data.analysisTitle }}</h2>
+            </div>
+            <div class="analysis-start2 mission-content">
+                <div class="modal-inner-grid">
+                    <div class="modal-img">
+                        <img src="{{ portfolio.data.analysisFirstImage }}" alt="{{ portfolio.data.analysisFirstImageAlt }}" class="rounded" width="260px" height="364px">
+                        <div class="card">
+                            <div>
+                                <i class="{{ portfolio.data.analysisFirstIcon }} primary-clr"></i>
+                            </div>
+                            <div>
+                                <h4 class="dark-clr">{{ portfolio.data.analysisFirstTitle }}</h4>
+                            </div>
+                            <div class="timer w15"></div>
+                            <div>
+                                <p>{{ portfolio.data.analysisFirstTime }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-text">
+                        <p>{{ portfolio.data.analysisFirstDesc1 }}</p>
+                        <p>{{ portfolio.data.analysisFirstDesc2 }}</p>
+                        <ul>
+                            <li>
+                                <i class="fas fa-check secondary-clr"></i>{{ portfolio.data.analysisFirstList1 }}</li>
+                            <li>
+                                <i class="fas fa-check secondary-clr"></i>{{ portfolio.data.analysisFirstList2 }}</li>
+                            <li>
+                                <i class="fas fa-check secondary-clr"></i>{{ portfolio.data.analysisFirstList3 }}</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="analysis-start3 mission-content">
+                <div class="modal-inner-grid">
+                    <div class="modal-text">
+                        <p>{{ portfolio.data.analysisSecondDesc1 }}</p>
+                        <p>{{ portfolio.data.analysisSecondDesc2 }}</p>
+                        <ul>
+                            <li>
+                                <i class="fas fa-check secondary-clr"></i>{{ portfolio.data.analysisSecondList1 }}</li>
+                            <li>
+                                <i class="fas fa-check secondary-clr"></i>{{ portfolio.data.analysisSecondList2 }}</li>
+                            <li>
+                                <i class="fas fa-check secondary-clr"></i>{{ portfolio.data.analysisSecondList3 }}</li>
+                        </ul>
+                    </div>
+                    <div class="modal-img">
+                        <img src="{{ portfolio.data.analysisSecondImage }}" alt="{{ portfolio.data.analysisSecondImageAlt }}" class="rounded" width="260px" height="364px">
+                        <div class="card">
+                            <div>
+                                <i class="{{ portfolio.data.analysisSecondIcon }} primary-clr"></i>
+                            </div>
+                            <div>
+                                <h4 class="dark-clr">{{ portfolio.data.analysisSecondTitle }}</h4>
+                            </div>
+                            <div class="timer w50"></div>
+                            <div>
+                                <p>{{ portfolio.data.analysisSecondTime }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="analysis-start2 mission-content">
+                <div class="modal-inner-grid">
+                    <div class="modal-img">
+                        <img src="{{ portfolio.data.analysisThirdImage }}" alt="{{ portfolio.data.analysisThirdImageAlt }}" class="rounded" width="260px" height="364px">
+                        <div class="card">
+                            <div>
+                                <i class="{{ portfolio.data.analysisThirdIcon }} primary-clr"></i>
+                            </div>
+                            <div>
+                                <h4 class="dark-clr">{{ portfolio.data.analysisThirdTitle }}</h4>
+                            </div>
+                            <div class="timer w100"></div>
+                            <div>
+                                <p>{{ portfolio.data.analysisThirdTime }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-text">
+                        <p>{{ portfolio.data.analysisThirdDesc1 }}</p>
+                        <p>{{ portfolio.data.analysisThirdDesc2 }}</p>
+                        <ul>
+                            <li>
+                                <i class="fas fa-check secondary-clr"></i>{{ portfolio.data.analysisThirdList1 }}</li>
+                            <li>
+                                <i class="fas fa-check secondary-clr"></i>{{ portfolio.data.analysisThirdList2 }}</li>
+                            <li>
+                                <i class="fas fa-check secondary-clr"></i>{{ portfolio.data.analysisThirdList3 }}</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- UX/UI -->
+        <section class="modal-grid modal-padding modal-analysis">
+            <div class="analysis-title modal-left-title">
+                <h3>{{ portfolio.data.firstSkillBadge }}</h3>
+                <h2 class="dark-clr">{{ portfolio.data.firstSkillTitle }}</h2>
+            </div>
+            <div class="analysis-start2 mission-content">
+                <div class="modal-inner-grid">
+                    <div class="modal-img">
+                        <img src="{{ portfolio.data.firstSkillFirstImage }}" alt="{{ portfolio.data.firstSkillFirstImageAlt }}" class="rounded" width="260px" height="364px">
+                        <div class="card">
+                            <div>
+                                <i class="{{ portfolio.data.firstSkillFirstIcon }} primary-clr"></i>
+                            </div>
+                            <div>
+                                <h4 class="dark-clr">{{ portfolio.data.firstSkillFirstTitle }}</h4>
+                            </div>
+                            <div class="timer w25"></div>
+                            <div>
+                                <p>{{ portfolio.data.firstSkillFirstTime }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-text">
+                        <p>{{ portfolio.data.firstSkillFirstDesc1 }}</p>
+                        <p>{{ portfolio.data.firstSkillFirstDesc2 }}</p>
+                        <div class="flex">
+                            <ul>
+                                <li class="grey-line">
+                                    <i class="fas fa-check secondary-clr"></i>{{ portfolio.data.firstSkillFirstList1 }}</li>
+                                <li class="grey-line">
+                                    <i class="fas fa-check secondary-clr"></i>{{ portfolio.data.firstSkillFirstList2 }}</li>
+                                <li class="grey-line">
+                                    <i class="fas fa-check secondary-clr"></i>{{ portfolio.data.firstSkillFirstList3 }}</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="analysis-start3 mission-content">
+                <div class="modal-inner-grid">
+                    <div class="modal-text">
+                        <p>{{ portfolio.data.firstSkillSecondDesc1 }}</p>
+                        <p>{{ portfolio.data.firstSkillSecondDesc2 }}</p>
+                        <ul>
+                            <li class="grey-line">
+                                <i class="fas fa-check secondary-clr"></i>{{ portfolio.data.firstSkillSecondList1 }}</li>
+                            <li class="grey-line">
+                                <i class="fas fa-check secondary-clr"></i>{{ portfolio.data.firstSkillSecondList2 }}</li>
+                            <li class="grey-line">
+                                <i class="fas fa-check secondary-clr"></i>{{ portfolio.data.firstSkillSecondList3 }}</li>
+                        </ul>
+                    </div>
+                    <div class="modal-img">
+                        <img src="{{ portfolio.data.firstSkillSecondImage }}" alt="{{ portfolio.data.firstSkillSecondImageAlt }}" class="rounded" width="260px" height="364px">
+                        <div class="card">
+                            <div>
+                                <i class="{{ portfolio.data.firstSkillSecondIcon }} primary-clr"></i>
+                            </div>
+                            <div>
+                                <h4 class="dark-clr">{{ portfolio.data.firstSkillSecondTitle }}</h4>
+                            </div>
+                            <div class="timer w50"></div>
+                            <div>
+                                <p>{{ portfolio.data.firstSkillSecondTime }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="analysis-start2 mission-content">
+                <div class="modal-inner-grid">
+                    <div class="modal-img">
+                        <img src="{{ portfolio.data.firstSkillThirdImage }}" alt="{{ portfolio.data.firstSkillThirdImageAlt }}" class="rounded" width="260px" height="364px">
+                        <div class="card">
+                            <div>
+                                <i class="{{ portfolio.data.firstSkillThirdIcon }} primary-clr"></i>
+                            </div>
+                            <div>
+                                <h4 class="dark-clr">{{ portfolio.data.firstSkillThirdTitle }}</h4>
+                            </div>
+                            <div class="timer w100"></div>
+                            <div>
+                                <p>{{ portfolio.data.firstSkillThirdTitle }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-text">
+                        <p>{{ portfolio.data.firstSkillThirdDesc1 }}</p>
+                        <p>{{ portfolio.data.firstSkillThirdDesc2 }}</p>
+                        <ul>
+                            <li class="grey-line">
+                                <i class="fas fa-check secondary-clr"></i>{{ portfolio.data.firstSkillThirdList1 }}</li>
+                            <li class="grey-line">
+                                <i class="fas fa-check secondary-clr"></i>{{ portfolio.data.firstSkillThirdList2 }}</li>
+                            <li class="grey-line">
+                                <i class="fas fa-check secondary-clr"></i>{{ portfolio.data.firstSkillThirdList3 }}</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Web Development -->
+        <section class="modal-grid modal-padding modal-analysis light-bg">
+            <div class="analysis-title modal-left-title">
+                <h3>{{ portfolio.data.secondSkillBadge }}</h3>
+                <h2 class="dark-clr">{{ portfolio.data.secondSkillTitle }}</h2>
+            </div>
+            <div class="analysis-start2 mission-content">
+                <div class="modal-inner-grid">
+                    <div class="modal-img">
+                        <img src="{{ portfolio.data.secondSkillFirstImage }}" alt="{{ portfolio.data.secondSkillFirstImageAlt }}" class="rounded" width="260px" height="364px">
+                        <div class="card">
+                            <div>
+                                <i class="{{ portfolio.data.secondSkillFirstIcon }} primary-clr"></i>
+                            </div>
+                            <div>
+                                <h4 class="dark-clr">{{ portfolio.data.secondSkillFirstTitle }}</h4>
+                            </div>
+                            <div class="timer w15"></div>
+                            <div>
+                                <p>{{ portfolio.data.secondSkillFirstTime }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-text">
+                        <p>{{ portfolio.data.secondSkillFirstDesc1 }}</p>
+                        <p>{{ portfolio.data.secondSkillFirstDesc2 }}</p>
+                        <ul>
+                            <li>
+                                <i class="fas fa-check secondary-clr"></i>{{ portfolio.data.secondSkillFirstList1 }}</li>
+                            <li>
+                                <i class="fas fa-check secondary-clr"></i>{{ portfolio.data.secondSkillFirstList2 }}</li>
+                            <li>
+                                <i class="fas fa-check secondary-clr"></i>{{ portfolio.data.secondSkillFirstList3 }}</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="analysis-start3 mission-content">
+                <div class="modal-inner-grid">
+                    <div class="modal-text">
+                        <p>{{ portfolio.data.secondSkillSecondDesc1 }}</p>
+                        <p>{{ portfolio.data.secondSkillSecondDesc2 }}</p>
+                        <ul>
+                            <li>
+                                <i class="fas fa-check secondary-clr"></i>{{ portfolio.data.secondSkillSecondList1 }}</li>
+                            <li>
+                                <i class="fas fa-check secondary-clr"></i>{{ portfolio.data.secondSkillSecondList2 }}</li>
+                            <li>
+                                <i class="fas fa-check secondary-clr"></i>{{ portfolio.data.secondSkillSecondList3 }}</li>
+                        </ul>
+                    </div>
+                    <div class="modal-img">
+                        <img src="{{ portfolio.data.secondSkillSecondImage }}" alt="{{ portfolio.data.secondSkillSecondImageAlt }}" class="rounded" width="260px" height="364px">
+                        <div class="card">
+                            <div>
+                                <i class="{{ portfolio.data.secondSkillSecondIcon }} primary-clr"></i>
+                            </div>
+                            <div>
+                                <h4 class="dark-clr">{{ portfolio.data.secondSkillSecondTitle }}</h4>
+                            </div>
+                            <div class="timer w50"></div>
+                            <div>
+                                <p>{{ portfolio.data.secondSkillSecondTime }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="analysis-start2 mission-content">
+                <div class="modal-inner-grid">
+                    <div class="modal-img">
+                        <img src="{{ portfolio.data.secondSkillThirdImage }}" alt="{{ portfolio.data.secondSkillThirdImageAlt }}" class="rounded" width="260px" height="364px">
+                        <div class="card">
+                            <div>
+                                <i class="{{ portfolio.data.secondSkillThirdIcon }} primary-clr"></i>
+                            </div>
+                            <div>
+                                <h4 class="dark-clr">{{ portfolio.data.secondSkillThirdTitle }}</h4>
+                            </div>
+                            <div class="timer w100"></div>
+                            <div>
+                                <p>{{ portfolio.data.secondSkillThirdTime }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-text">
+                        <p>{{ portfolio.data.secondSkillThirdDesc1 }}</p>
+                        <p>{{ portfolio.data.secondSkillThirdDesc2 }}</p>
+                        <ul>
+                            <li>
+                                <i class="fas fa-check secondary-clr"></i>{{ portfolio.data.secondSkillThirdList1 }}</li>
+                            <li>
+                                <i class="fas fa-check secondary-clr"></i>{{ portfolio.data.secondSkillThirdList2 }}</li>
+                            <li>
+                                <i class="fas fa-check secondary-clr"></i>{{ portfolio.data.secondSkillThirdList3 }}</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+</aside>

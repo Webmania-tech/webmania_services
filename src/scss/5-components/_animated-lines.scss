@@ -1,0 +1,129 @@
+//Animation lines
+.lines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  margin: auto;
+  width: 100%;
+  display: none;
+  @include for-desktop-up {
+    display: block;
+  }
+  & .line {
+    position: absolute;
+    width: 1.5px;
+    height: 100%;
+    top: 0;
+    background: rgba(248, 248, 250, 1);
+    overflow: hidden;
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      height: 15%;
+      width: 100%;
+      top: -50%;
+      left: 0;
+      animation: run 7s 0s infinite;
+      animation-fill-mode: forwards;
+      animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+    }
+  }
+  &.three-lines {
+    left: 50%;
+    & div:nth-child(1) {
+      margin-left: -25%;
+      &::after {
+        animation-delay: 2s;
+        background: linear-gradient(
+          to bottom,
+          rgba(254, 183, 93, 0) 0%,
+          #E55934 75%,
+          #E55934 100%
+        );
+      }
+    }
+    & div:nth-child(2) {
+      &::after {
+        background: linear-gradient(
+          to bottom,
+          rgba(82, 102, 255, 0) 0%,
+          #2667DE 75%,
+          #2667DE 100%
+        );
+      }
+    }
+    & div:nth-child(3) {
+      margin-left: 25%;
+      &::after {
+        animation-delay: 2.5s;
+        background: linear-gradient(
+          to bottom,
+          rgba(254, 183, 93, 0) 0%,
+          #E55934 75%,
+          #E55934 100%
+        );
+      }
+    }
+  }
+  &.four-lines {
+    left: 40%;
+    & div:nth-child(1) {
+      margin-left: -20%;
+      &::after {
+        animation-delay: 2s;
+        background: linear-gradient(
+          to bottom,
+          rgba(254, 183, 93, 0) 0%,
+          #E55934 75%,
+          #E55934 100%
+        );
+      }
+    }
+    & div:nth-child(2) {
+      &::after {
+        background: linear-gradient(
+          to bottom,
+          rgba(82, 102, 255, 0) 0%,
+          #2667DE 75%,
+          #2667DE 100%
+        );
+      }
+    }
+    & div:nth-child(3) {
+      margin-left: 20%;
+      &::after {
+        animation-delay: 2.5s;
+        background: linear-gradient(
+          to bottom,
+          rgba(254, 183, 93, 0) 0%,
+          #E55934 75%,
+          #E55934 100%
+        );
+      }
+    }
+    & div:nth-child(4) {
+      margin-left: 40%;
+      &::after {
+        animation-delay: 3s;
+        background: linear-gradient(
+          to bottom,
+          rgba(82, 102, 255, 0) 0%,
+          #2667DE 75%,
+          #2667DE 100%
+        );
+      }
+    }
+  }
+}
+
+@keyframes run {
+  0% {
+    top: -50%;
+  }
+  100% {
+    top: 110%;
+  }
+}

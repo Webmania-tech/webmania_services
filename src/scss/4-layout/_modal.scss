@@ -1,0 +1,142 @@
+// Modal General Presentation
+// Modal Context
+.modal-presentation {
+  & .modal-context {
+    grid-column: 1 / span 4;
+    @include for-tablet-portrait-up {
+      grid-column: 2 / span 6;
+    }
+    @include for-desktop-up {
+      grid-column: 2 / span 4;
+    }
+    & div:first-child {
+      margin-bottom: 3.5rem;
+    }
+  }
+  // Modal Challenges
+  & .modal-challenges {
+    grid-column: 1 / span 4;
+    height: min-content;
+    @include for-tablet-portrait-up {
+      grid-column: 2 / span 6;
+    }
+    @include for-desktop-up {
+      grid-column: 7 / span 4;
+    }
+    & div:first-child {
+      margin-bottom: 3rem;
+    }
+    & .modal-summary img {
+      border-radius: 0.375rem;
+    }
+  }
+  // Modal Charts
+  & .modal-charts {
+    grid-column: 1 / span 4;
+    height: min-content;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 1em;
+    @include for-tablet-portrait-up {
+      grid-column: 2 / span 6;
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include for-desktop-up {
+      grid-column: 2 / span 10;
+      grid-template-columns: repeat(3, 1fr);
+    }
+    & .card {
+      padding: 30px 45px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      & div:first-child {
+        margin-bottom: 1em;
+      }
+      & img {
+        margin: auto;
+      }
+    }
+  }
+}
+
+// Modal Mission
+.modal-mission {
+  // Mission Cards
+  & .mission-cards {
+    grid-column: 1 / span 4;
+    display: grid;
+    grid-gap: 1em;
+    grid-template-columns: repeat(1, 1fr);
+    @include for-tablet-portrait-up {
+      grid-column: 2 / span 6;
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include for-desktop-up {
+      grid-column: 2 / span 9;
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}
+
+// Modal Expertise & Gallery Center Title
+.modal-expertise,
+.modal-gallery {
+  & .expertise-title,
+  .gallery-title {
+    grid-column: 1 / span 4;
+    @include for-tablet-portrait-up {
+      grid-column: 2 / span 6;
+    }
+    @include for-desktop-up {
+      grid-column: 4 / span 6;
+      text-align: center;
+    }
+  }
+}
+
+// Modal left title
+.modal-left-title {
+  grid-column: 1 / span 4;
+  @include for-tablet-portrait-up {
+    grid-column: 2 / span 6;
+  }
+  @include for-desktop-up {
+    grid-column: 3 / span 8;
+  }
+}
+
+// Modal Analyse Stratégique
+.modal-analysis {
+  & .analysis-start2 {
+    grid-column: 1 / span 4;
+    @include for-tablet-portrait-up {
+      grid-column: 2 / span 6;
+    }
+    @include for-desktop-up {
+      grid-column: 2 / span 8;
+    }
+  }
+  & .analysis-start3 {
+    grid-column: 1 / span 4;
+    margin: 3rem 0;
+    @include for-tablet-portrait-up {
+      grid-column: 2 / span 6;
+    }
+    @include for-desktop-up {
+      grid-column: 3 / span 8;
+    }
+  }
+}
+
+.modal-inner-grid {
+  display: grid;
+  grid-gap: 2em;
+  grid-template-columns: repeat(1, 1fr);
+  min-width: 100%;
+  max-width: 100%;
+  @include for-tablet-portrait-up {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

@@ -1,0 +1,40 @@
+<nav>
+    <div class="nav-logo">
+        <a href="/">
+            <img src="\assets\vector\logos\webmania_logo.svg" alt="Logo de l'image de marque de Webmania"/>
+        </a>
+    </div>
+    <div class="nav-toggle">
+        <div class="toggle-container">
+            <div class="toggle-line line1"></div>
+            <div class="toggle-line line2"></div>
+            <div class="toggle-line line3"></div>
+        </div>
+    </div>
+    <div class="main-nav">
+        <div class="nav-links">
+            {# <a href="/index" class="nav-item {{ 'active' if ' ' in page.url }}">Accueil</a> #}
+            <a href="/design/" class="nav-item {{ 'active' if '/design' in page.url }}">Design</a>
+            <a href="/developpement-web/" class="nav-item {{ 'active' if '/developpement-web' in page.url }}">Développement web</a>
+            <a href="/etudes-cas/" class="nav-item {{ 'active' if '/etudes-cas' in page.url }}">Études de cas</a>
+            <a href="/mon-parcours/" class="nav-item {{ 'active' if '/mon-parcours' in page.url }}">Mon parcours</a>
+            <a href="/blog/" class="nav-item {{ 'active' if '/blog' in page.url }}">Blog</a>
+            <a href="/contact/" class="nav-item {{ 'active' if '/contact' in page.url }}">Contact</a>
+        </div>
+        <div class="nav-cta">
+            <div class="cta-contact">
+                <a class="btn btn-outlined border-primary-clr nav-item" href="tel:0033648627410">06 48 62 74 10</a>
+                <a class="btn btn-outlined border-secondary-clr nav-item" href="mailto:ask.webmania@gmail.com">ask.webmania@gmail.com</a>
+            </div>
+            {# <div class="cta-social">
+                <a href="https://www.linkedin.com/in/webmania-services/" target="_blank" class="btn-icon btn-secondary nav-item">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://www.behance.net/webmania" target="_blank" class="btn-icon btn-secondary nav-item">
+                    <i class="fab fa-behance"></i>
+                </a>
+            </div> #}
+        </div>
+    </div>
+</nav>
+<div class="nav-bg"></div>

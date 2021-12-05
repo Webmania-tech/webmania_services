@@ -1,0 +1,31 @@
+/* Variables only */
+
+// Colors
+$primary-clr: #2960E3;
+$secondary-clr: #E55934;
+$dark-clr: #222629;
+$dark-grey-clr: #707b87;
+$mid-toned-clr: #3a434d;
+$light-clr: #f0f0f2;
+$lightest-clr: #f8f8fa;
+$white-clr: #fff;
+
+// Backgrounds
+$secondary-gradient-bg: linear-gradient(
+  160deg,
+  rgba(251, 167, 64, 1) 0%,
+  rgba(247, 176, 91, 1) 100%
+);
+
+// Breakpoints
+$breakpoints: (
+  for-phone-only: 599px,
+  for-tablet-portrait-up: 600px,
+  for-tablet-landscape-up: 900px,
+  for-desktop-up: 1200px,
+  for-big-desktop-up: 1800px,
+);
+
+// Spacing
+$btn-padding: 0.5rem 1rem;
+$btn-icon-padding: 0.6em 0.8em;

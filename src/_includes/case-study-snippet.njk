@@ -1,0 +1,29 @@
+<div class="item">
+    <div class="card case-study-card">
+        <a href="#{{ portfolio.data.id }}" class="js-modal card-modal-link"></a>
+        <div class="card-header">
+            <div class="img-overlay">
+                <i class="fa fa-search fa-2x"></i>
+            </div>
+            <img src="{{ portfolio.data.cardImage }}" alt="{{ portfolio.data.cardImage }}">
+        </div>
+        <div class="card-content">
+            <div class="card-title">
+                <h4 class="dark-clr underlined">{{ portfolio.data.title }}</h4>
+            </div>
+            <div class="card-summary">
+                <p>{{ portfolio.data.cardSummary }}</p>
+            </div>
+            <div class="card-badges">
+                <div class="card-badges-title dark-clr">
+                    <b>Catégories</b>
+                </div>
+                <div class="card-badges-content">
+                    <span class="badge primary-clr-bg">{{ portfolio.data.firstCategory }}</span>
+                    <span class="badge primary-clr-bg">{{ portfolio.data.secondCategory }}</span>
+                    <span class="badge primary-clr-bg">{{ portfolio.data.thirdCategory }}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

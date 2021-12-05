@@ -1,0 +1,31 @@
+/* Basic styles, no class or ID */
+
+/* Basic styles */
+html {
+  overflow-x: hidden;
+}
+body {
+  overflow-x: hidden;
+  position: relative;
+  z-index: -4;
+}
+a {
+  color: inherit;
+  text-decoration: underline;
+}
+img {
+  max-width: 100%;
+}
+
+.hero-banner {
+  position: relative;
+  z-index: -3;
+}
+
+:focus {
+  border: 1px solid rgba($color: #a6b6c7, $alpha: 1) !important;
+}
+
+p + p {
+  margin-top: 1rem;
+}

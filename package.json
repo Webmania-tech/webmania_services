@@ -1,0 +1,30 @@
+{
+  "name": "webmania_services",
+  "version": "1.0.0",
+  "description": "These are the starting files used by [Kevin Powell](https://kevinpowell.co) to create a personal blog site for the [Codementor](https://www.codementor.io/) DevProjects Challenge, [Create a fast and secure blog using JAMStack](https://www.codementor.io/projects/web/create-a-fast-and-secure-blog-using-jamstack-c93coupnxb). You are free to use them however you want to get started with the challenge, if you'd like to start working on creating the site without worrying about the content itself.",
+  "main": "index.js",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy",
+    "sass": "sass --watch src/scss/main.scss:src/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Webmania-tech/webmania_services.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Webmania-tech/webmania_services/issues"
+  },
+  "homepage": "https://github.com/Webmania-tech/webmania_services#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.12.1"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.4",
+    "owl.carousel": "^2.3.4",
+    "sass": "^1.43.5"
+  }
+}

@@ -1,0 +1,150 @@
+---
+title: Webmania - Designer UX/UI et Intégratrice Web
+layout: 'base.njk'
+---
+
+<!-- Hero Banner -->
+<section class="full-width light-bg hero-banner">
+  <div class="hero-logo-pattern"></div>
+  <div class="useful-width margin-constraint hero-banner-content">
+    <div>
+      <h3>Ouverte aux opportunités</h3>
+      <h1 class="dark-clr">Designer UX/UI et Intégratrice Web</h1>
+      <p>Bonjour, je m'appelle Anna Ezzarani et je crée des expériences digitales au service des entreprises.</p>
+      <a href="/contact/" class="btn btn-primary uppercase">Un besoin ? Parlons-en !</a>
+    </div>
+    <div>
+      <img src="\assets\bitmap\hero\random-model-homepage-min.png" alt="Jeune femme cheveux bouclés souriante">
+    </div>
+  </div>
+</section>
+
+<!-- Offer -->
+<section class="full-width offer relative">
+  <div class="lines three-lines">
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+  </div>
+  <div class="useful-width margin-constraint grid">
+    <div class="offer-title left-title">
+      <h3>Quelles sont mes compétences ?</h3>
+      <h2 class="dark-clr">Des compétences complémentaires pour exprimer votre identité de marque en ligne</h2>
+    </div>
+    <div class="offer-cards">
+      <a href="design.php" class="item card primary">
+        <div class="card-icon">
+          <img src="\assets\vector\icons\014-pantone.svg" alt="Icône bicolore de palette de couleurs">
+        </div>
+        <div class="card-title">
+          <h4 class="underlined">Design UX/UI et Design Graphique</h4>
+        </div>
+        <div class="card-search primary-clr">
+          <i class="fa fa-search fa-sm"></i>
+        </div>
+      </a>
+      <a href="development.php" class="item card secondary">
+        <div class="card-icon">
+          <img src="\assets\vector\icons\011-html-file.svg" alt="Icône bicolore feuille de papier avec balise de code et diamant">
+        </div>
+        <h4 class="underlined">Intégration & Développement</h4>
+        <div class="card-search secondary-clr">
+          <i class="fa fa-search fa-sm"></i>
+        </div>
+      </a>
+      <a href="my-journey.php" class="item card primary">
+        <div class="card-icon">
+          <img src="\assets\vector\icons\003-business-card.svg" alt="Icône bicolore jeune femme et calepin">
+        </div>
+        <h4 class="underlined">Mon parcours dans le web</h4>
+        <div class="card-search primary-clr">
+          <i class="fa fa-search fa-sm"></i>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Case studies Partials -->
+<section id="case-studies" class="full-width light-bg">
+  <div class="useful-width margin-constraint case-studies-content">
+    <div class="case-studies-title-container">
+      <div class="case-studies-title">
+        <h3>Études de cas</h3>
+        <h2 class="dark-clr">Des exemples concrets pour mieux comprendre mes méthodes de travail</h2>
+      </div>
+    </div>
+    <div class="case-studies-cards">
+      <div class="owl-carousel owl-carousel-lg owl-theme">
+        {%- for portfolio in collections.portfolio -%}
+          {% include 'case-study-snippet.njk' %}
+        {%- endfor -%}
+      </div>
+    </div>
+  </div>
+</section>
+
+{%- for portfolio in collections.portfolio -%}
+  {% include 'case-study.njk' %}
+{%- endfor -%}
+
+<!-- Values -->
+<section class="full-width values">
+  <div class="lines four-lines">
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+  </div>
+  <div class="useful-width margin-constraint values-content">
+    <div class="values-title">
+      <h3>Quels sont mes atouts ?</h3>
+      <h2 class="dark-clr">Travailler avec Webmania, c'est la garantie d'une salariée investie au service des objectifs de votre entreprise</h2>
+    </div>
+    <div class="values-cards">
+      <div class="item card small-card">
+        <div class="card-icon primary-clr-bg">
+          <i class="fas fa-briefcase"></i>
+        </div>
+        <h4 class="dark-clr">5 ans d'expérience</h4>
+        <p>dans le secteur du digital</p>
+      </div>
+      <div class="item card small-card">
+        <div class="card-icon secondary-clr-bg">
+          <i class="fas fa-eye"></i>
+        </div>
+        <h4 class="dark-clr">Une vision à 360°</h4>
+        <p>de la sphère digitale</p>
+      </div>
+      <div class="item card small-card">
+        <div class="card-icon primary-clr-bg">
+          <i class="fas fa-desktop"></i>
+        </div>
+        <h4 class="dark-clr">Des compétences variées</h4>
+        <p>autour du digital</p>
+      </div>
+      <div class="item card small-card">
+        <div class="card-icon secondary-clr-bg">
+          <i class="fab fa-rocketchat"></i>
+        </div>
+        <h4 class="dark-clr">La communication</h4>
+        <p>au cœur de la relation client</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Blog -->
+<section class="full-width blog light-bg">
+  <div class="useful-width margin-constraint blog-content">
+    <div class="blog-title">
+      <h3>Articles de blog</h3>
+      <h2 class="dark-clr">Des articles et des tutoriels pour vous aider à développer votre communication en ligne </h2>
+    </div>
+    <div class="blog-cards">
+      {%- for post in collections.featured | reverse -%}
+        {% include 'article-snippet.njk' %}
+      {%- endfor -%}
+    </div>
+  </div>
+</section>

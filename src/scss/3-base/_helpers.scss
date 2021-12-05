@@ -1,0 +1,127 @@
+/* Classes that helps */
+
+/* Typography */
+.lowercase {
+  text-transform: lowercase;
+}
+.uppercase {
+  text-transform: uppercase;
+}
+.underlined {
+  text-decoration: underline;
+}
+// Decoration on text
+.sm-underlined {
+  position: relative;
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 15px;
+    height: 2px;
+    bottom: -10px;
+  }
+  &.secondary-border {
+    &::before {
+      background-color: $secondary-clr;
+    }
+  }
+  &.primary-border {
+    &::before {
+      background-color: $primary-clr;
+    }
+  }
+}
+
+/* Borders */
+.rounded {
+  border-radius: 5px;
+}
+
+/* Colors */
+.light-clr {
+  color: $light-clr;
+}
+.dark-clr {
+  color: $dark-clr;
+}
+.primary-clr {
+  color: $primary-clr;
+}
+.secondary-clr {
+  color: $secondary-clr;
+}
+.white-clr {
+  color: $white-clr;
+}
+
+/* Background Colors */
+.white-clr-bg {
+  background-color: $white-clr;
+}
+.light-bg {
+  background-color: $light-clr;
+}
+.primary-clr-bg {
+  background-color: $primary-clr;
+}
+.secondary-clr-bg {
+  background-color: $secondary-clr;
+}
+.transparent-bg {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+.dark-clr-bg {
+  background-color: $dark-clr;
+}
+.mid-toned-clr-bg {
+  background-color: $mid-toned-clr;
+}
+
+/* Gradient Background Colors */
+.secondary-gradient-bg {
+  background: $secondary-gradient-bg;
+}
+
+/* Layout */
+.useful-width {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  @include for-tablet-portrait-up {
+    max-width: 560px;
+  }
+  @include for-tablet-landscape-up {
+    max-width: 768px;
+  }
+  @include for-desktop-up {
+    max-width: 1024px;
+    padding-top: 6.5rem;
+    padding-bottom: 6.5rem;
+  }
+  @include for-big-desktop-up {
+    max-width: 1280px;
+  }
+}
+.full-width {
+  width: 100%;
+}
+.margin-constraint {
+  padding-right: 30px;
+  padding-left: 30px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.flex {
+  display: flex;
+}
+
+// Position
+.relative {
+  position: relative;
+}
+
+// Overflow
+.overflow-hidden {
+  overflow: hidden;
+  max-height: 100vh;
+}
