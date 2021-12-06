@@ -31,3 +31,16 @@
 .owl-dots {
   margin-top: 30px;
 }
+
+/* Equal Heights for OwlCarousel 2 */
+
+.owl-carousel {
+  & .owl-stage {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  & .owl-item {
+    display: flex;
+    height: auto !important;
+  }
+}

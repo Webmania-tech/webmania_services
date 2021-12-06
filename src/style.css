@@ -546,7 +546,6 @@ p + p {
 /* Styling Nav */
 nav {
   height: 80px;
-  max-width: 1400px;
   display: flex;
   margin: auto;
 }
@@ -842,17 +841,22 @@ nav {
     max-width: 400px;
   }
 }
-.hero-banner-content div:last-child {
+.hero-banner-content .hero-img {
   display: none;
-  max-width: 440px;
 }
 @media screen and (min-width: 600px) {
-  .hero-banner-content div:last-child {
+  .hero-banner-content .hero-img {
     display: block;
     position: absolute;
     bottom: -7px;
     right: 0;
   }
+}
+.hero-banner-content .lg-hero-img {
+  max-width: 480px;
+}
+.hero-banner-content .md-hero-img {
+  max-width: 440px;
 }
 
 /* Footer styles */
@@ -1098,7 +1102,7 @@ nav {
   grid-column: 1/span 4;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  grid-gap: 1em;
+  grid-gap: 1rem;
 }
 @media screen and (min-width: 1200px) {
   .contact-content {
@@ -1107,8 +1111,12 @@ nav {
   }
 }
 
+.contact-cards {
+  margin: auto 0;
+}
+
 .contact-cards .card:first-child {
-  margin-bottom: 1em;
+  margin-bottom: 1rem;
 }
 
 .contact-cards .card {
@@ -1117,6 +1125,7 @@ nav {
 }
 .contact-cards .card span {
   font-size: 0.9em;
+  text-decoration: none;
 }
 .contact-cards .card h2 {
   margin-bottom: 0;
@@ -2285,6 +2294,16 @@ form textarea::placeholder {
 
 .owl-dots {
   margin-top: 30px;
+}
+
+/* Equal Heights for OwlCarousel 2 */
+.owl-carousel .owl-stage {
+  display: flex;
+  flex-wrap: wrap;
+}
+.owl-carousel .owl-item {
+  display: flex;
+  height: auto !important;
 }
 
 .modal {

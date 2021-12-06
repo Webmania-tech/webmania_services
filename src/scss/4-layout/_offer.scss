@@ -51,20 +51,24 @@
   grid-column: 1 / span 4;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  grid-gap: 1em;
+  grid-gap: 1rem;
   @include for-desktop-up {
     grid-column: 2 / span 12;
     grid-template-columns: repeat(2, 1fr);
   }
 }
+.contact-cards {
+  margin: auto 0;
+}
 .contact-cards .card:first-child {
-  margin-bottom: 1em;
+  margin-bottom: 1rem;
 }
 .contact-cards .card {
   display: inherit;
   padding: 30px;
   & span {
     font-size: 0.9em;
+    text-decoration: none;
   }
   & h2 {
     margin-bottom: 0;

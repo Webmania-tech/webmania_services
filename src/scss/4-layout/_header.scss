@@ -4,7 +4,6 @@
 /* Styling Nav */
 nav {
   height: 80px;
-  max-width: 1400px;
   display: flex;
   margin: auto;
 }
@@ -274,14 +273,20 @@ nav {
       }
     }
   }
-  & div:last-child {
+  & .hero-img {
     display: none;
-    max-width: 440px;
     @include for-tablet-portrait-up {
       display: block;
       position: absolute;
       bottom: -7px;
       right: 0;
     }
+  }
+  & .lg-hero-img {
+    max-width: 480px;
+  }
+
+  & .md-hero-img {
+    max-width: 440px;
   }
 }
